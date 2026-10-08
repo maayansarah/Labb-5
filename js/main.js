@@ -99,10 +99,19 @@ function deleteHistory() {
 // När formuläret skickas:
 // - validera inmatningen
 // - skapa studentkort om valideringen lyckas
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (validateForm()) {
+    createStudentCard();
+  }
+});
 
 // När användaren klickar på "Rensa"
+clearButton.addEventListener("click", clearForm);
 
 // När användaren klickar på "Radera historik"
+deleteHistoryButton.addEventListener("click", deleteHistory);
 
 // När sidan laddas:
 // - läs in och visa eventuell tidigare historik
+window.addEventListener("load", loadHistory);
