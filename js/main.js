@@ -35,6 +35,7 @@ function validateForm() {
   // Kontrollera formulärets obligatoriska fält
   // Visa eventuella felmeddelanden
   // Returnera resultatet (true eller false) av valideringen
+  console.log("Validerar formulär");
 }
 
 /**
@@ -43,6 +44,7 @@ function validateForm() {
 function displayErrors() {
   // Rensa tidigare felmeddelanden
   // Skriv ut aktuella felmeddelanden till DOM
+  console.log("Visar felmeddelanden");
 }
 
 /**
@@ -53,6 +55,7 @@ function createStudentCard() {
   // Uppdatera studentkortet
   // Lägg till studentkortet i historiken
   // Spara och uppdatera historiken
+  console.log("Skapar studentkort");
 }
 
 /**
@@ -60,6 +63,7 @@ function createStudentCard() {
  */
 function saveHistory() {
   // Spara history i localStorage
+  console.log("Sparar historik");
 }
 
 /**
@@ -68,6 +72,7 @@ function saveHistory() {
 function loadHistory() {
   // Hämta eventuell sparad historik
   // Uppdatera history
+  console.log("Läser in historik");
 }
 
 /**
@@ -76,6 +81,7 @@ function loadHistory() {
 function renderHistory() {
   // Rensa tidigare visad historik
   // Skriv ut innehållet i history till DOM
+  console.log("Visar historik");
 }
 
 /**
@@ -84,6 +90,7 @@ function renderHistory() {
 function clearForm() {
   // Återställ formulär och studentkort
   // Rensa eventuella felmeddelanden
+  console.log("Rensar formulär");
 }
 
 /**
@@ -92,6 +99,7 @@ function clearForm() {
 function deleteHistory() {
   // Radera sparad historik
   // Uppdatera history och visningen på sidan
+  console.log("Raderar historik");
 }
 
 // Eventlyssnare
