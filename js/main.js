@@ -36,6 +36,22 @@ function validateForm() {
   // Visa eventuella felmeddelanden
   // Returnera resultatet (true eller false) av valideringen
   console.log("Validerar formulär");
+
+  const fullnameInputValue = fullnameInput.value.trim();
+  if (fullnameInputValue) {
+  }
+
+  const emailInputValue = emailInput.value.trim();
+  if (emailInputValue) {
+  }
+
+  const phoneInputValue = phoneInput.value.trim();
+  if (phoneInputValue) {
+  }
+
+  const fontSelectValue = fontSelect.value.trim();
+  if (fontSelectValue) {
+  }
 }
 
 /**
