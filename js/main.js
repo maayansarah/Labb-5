@@ -93,6 +93,20 @@ function createStudentCard() {
   // Lägg till studentkortet i historiken
   // Spara och uppdatera historiken
   console.log("Skapar studentkort");
+
+  const fullnameInputValue = fullnameInput.value.trim();
+  previewFullname.textContent = fullnameInputValue;
+
+  const emailInputValue = emailInput.value.trim();
+  previewEmail.textContent = emailInputValue;
+
+  const phoneInputValue = phoneInput.value.trim();
+  previewPhone.textContent = phoneInputValue;
+
+  const fontSelectValue = fontSelect.value;
+  previewFullname.style.fontFamily = fontSelectValue;
+  previewEmail.style.fontFamily = fontSelectValue;
+  previewPhone.style.fontFamily = fontSelectValue;
 }
 
 /**
