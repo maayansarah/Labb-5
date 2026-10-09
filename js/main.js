@@ -37,21 +37,33 @@ function validateForm() {
   // Returnera resultatet (true eller false) av valideringen
   console.log("Validerar formulär");
 
+  //Tömmer arrayen
+  errors = [];
+
   const fullnameInputValue = fullnameInput.value.trim();
-  if (fullnameInputValue) {
+  if (fullnameInputValue === "") {
+    errors.push("Du måste ange ditt fullständiga namn");
   }
 
   const emailInputValue = emailInput.value.trim();
-  if (emailInputValue) {
+  if (emailInputValue === "") {
+    errors.push("Du måste ange din e-postadress");
   }
 
   const phoneInputValue = phoneInput.value.trim();
-  if (phoneInputValue) {
+  if (phoneInputValue === "") {
+    errors.push("Du måste ange ditt telefonnummer");
   }
 
   const fontSelectValue = fontSelect.value.trim();
   if (fontSelectValue) {
   }
+
+  if (errors.length > 0) {
+    console.log(errors);
+    return false;
+  }
+  return true;
 }
 
 /**
