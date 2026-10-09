@@ -59,10 +59,11 @@ function validateForm() {
   if (fontSelectValue) {
   }
 
+  displayErrors();
   if (errors.length > 0) {
-    console.log(errors);
     return false;
   }
+
   return true;
 }
 
@@ -73,6 +74,14 @@ function displayErrors() {
   // Rensa tidigare felmeddelanden
   // Skriv ut aktuella felmeddelanden till DOM
   console.log("Visar felmeddelanden");
+
+  errorList.innerHTML = "";
+
+  for (let i = 0; i < errors.length; i++) {
+    const liEl = document.createElement("li");
+    liEl.textContent = errors[i];
+    errorList.appendChild(liEl);
+  }
 }
 
 /**
