@@ -117,6 +117,7 @@ function createStudentCard() {
   history.unshift(studentCard);
 
   saveHistory();
+  renderHistory();
 }
 
 /**
@@ -151,6 +152,26 @@ function renderHistory() {
   // Rensa tidigare visad historik
   // Skriv ut innehållet i history till DOM
   console.log("Visar historik");
+
+  historySection.innerHTML = "";
+
+  history.forEach(function (studentCard) {
+    const articleEl = document.createElement("article");
+
+    const nameEl = document.createElement("p");
+    nameEl.textContent = `Namn: ${studentCard.fullname}`;
+    articleEl.appendChild(nameEl);
+
+    const emailEl = document.createElement("p");
+    emailEl.textContent = `E-post: ${studentCard.email}`;
+    articleEl.appendChild(emailEl);
+
+    const phoneEl = document.createElement("p");
+    phoneEl.textContent = `Telefon: ${studentCard.phone}`;
+    articleEl.appendChild(phoneEl);
+
+    historySection.appendChild(articleEl);
+  });
 }
 
 /**
