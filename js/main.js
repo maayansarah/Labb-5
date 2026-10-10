@@ -117,7 +117,6 @@ function createStudentCard() {
   history.unshift(studentCard);
 
   saveHistory();
-  renderHistory();
 }
 
 /**
@@ -126,6 +125,9 @@ function createStudentCard() {
 function saveHistory() {
   // Spara history i localStorage
   console.log("Sparar historik");
+
+  const jsonHistory = JSON.stringify(history);
+  localStorage.setItem("history", jsonHistory);
 }
 
 /**
