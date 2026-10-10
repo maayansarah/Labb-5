@@ -137,6 +137,11 @@ function loadHistory() {
   // Hämta eventuell sparad historik
   // Uppdatera history
   console.log("Läser in historik");
+
+  const loadedHistory = localStorage.getItem("history");
+  history = JSON.parse(loadedHistory);
+
+  renderHistory();
 }
 
 /**
