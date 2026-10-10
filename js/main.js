@@ -107,6 +107,17 @@ function createStudentCard() {
   previewFullname.style.fontFamily = fontSelectValue;
   previewEmail.style.fontFamily = fontSelectValue;
   previewPhone.style.fontFamily = fontSelectValue;
+
+  const studentCard = {
+    fullname: fullnameInputValue,
+    email: emailInputValue,
+    phone: phoneInputValue,
+    font: fontSelectValue,
+  };
+  history.unshift(studentCard);
+
+  saveHistory();
+  renderHistory();
 }
 
 /**
