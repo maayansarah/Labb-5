@@ -198,6 +198,12 @@ function deleteHistory() {
   // Radera sparad historik
   // Uppdatera history och visningen på sidan
   console.log("Raderar historik");
+
+  localStorage.removeItem("history");
+
+  historySection.innerHTML = "";
+
+  history = [];
 }
 
 // Eventlyssnare
