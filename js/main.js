@@ -170,6 +170,10 @@ function renderHistory() {
     phoneEl.textContent = `Telefon: ${studentCard.phone}`;
     articleEl.appendChild(phoneEl);
 
+    const fontEl = document.createElement("p");
+    fontEl.textContent = `Font: ${studentCard.font}`;
+    articleEl.appendChild(fontEl);
+
     historySection.appendChild(articleEl);
   });
 }
