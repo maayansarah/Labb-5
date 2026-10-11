@@ -140,8 +140,13 @@ function loadHistory() {
   console.log("Läser in historik");
 
   const loadedHistory = localStorage.getItem("history");
-  history = JSON.parse(loadedHistory);
+  const parsedHistory = JSON.parse(loadedHistory);
 
+  if (!parsedHistory) {
+    return;
+  }
+
+  history = parsedHistory;
   renderHistory();
 }
 
