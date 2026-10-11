@@ -185,6 +185,10 @@ function clearForm() {
   // Återställ formulär och studentkort
   // Rensa eventuella felmeddelanden
   console.log("Rensar formulär");
+
+  form.reset();
+
+  errorList.innerHTML = "";
 }
 
 /**
